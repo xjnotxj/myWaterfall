@@ -24,6 +24,7 @@
 
     $(".waterfall-container").waterfall({
     
+            //以下为默认缺省参数
             autoResize: true, // 当浏览器大小改变时是否自动调整
             offsetWidth: 5, // 每个元素之间的宽度距离(不加单位默认px)
             offsetHeight: 20, // 每个元素之间的高度距离(不加单位默认px)
