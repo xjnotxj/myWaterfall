@@ -4,6 +4,9 @@
 > http://jsfiddle.net/q3011893/p5k2ogy8/embedded/result,html,css,js/
 
 ## HTML结构
+
+在`div.box-content`中嵌入自定义的内容:
+
 ```
 <div class="waterfall-container">
     <div class="box">
