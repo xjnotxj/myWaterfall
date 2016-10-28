@@ -3,6 +3,12 @@
 ## Demo
 > http://jsfiddle.net/q3011893/p5k2ogy8/embedded/result,html,css,js/
 
+## Usage
+```
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/myWaterfall.js"></script>
+```
+
 ## HTML结构
 
 在`div.box-content`中嵌入自定义的内容:
