@@ -11,6 +11,15 @@
 
     }
 
+    .switch {
+        text-align: center;
+    }
+
+    .switch button {
+        height: 30px;
+        width: 100px;
+    }
+
     .waterfall-container {
     }
 
@@ -32,9 +41,12 @@
         font-size: 14px;
         box-sizing: border-box;
     }
+
 </style>
 <body>
-
+<div class="switch">
+    <button>关闭瀑布流</button>
+</div>
 <div class="waterfall-container">
     <div class="box">
         <div class="box-content">
@@ -129,6 +141,7 @@
 
     $(function () {
 
+        //初始化开启瀑布流布局
         $(".waterfall-container").waterfall({
             autoResize: true, // 当浏览器大小改变时是否自动调整
             offsetWidth: 5, // 每个元素之间的宽度距离(不加单位默认px)
@@ -137,8 +150,18 @@
             colNumber: 4, // 规定一行有几个元素，只有autoResize: false才生效
             colNumberMin: 2, // 规定一行最小有几个元素
             colNumberMax: 5, // 规定一行最大有几个元素
-            resizeDelay: 1150 // 自动调整延迟时间，一般情况下不需要设置，默认的就好了。});
+            resizeDelay: 0 // 自动调整延迟时间，一般情况下不需要设置，默认的就好了
+        });
 
+        //开关控制开关瀑布流布局
+        $(".switch button").click(function () {
+            if ($(this).html() == "开启瀑布流") {
+                $(".waterfall-container").waterfall('init');
+                $(this).html("关闭瀑布流");
+            } else if ($(this).html() == "关闭瀑布流") {
+                $(".waterfall-container").waterfall('destroy');
+                $(this).html("开启瀑布流");
+            }
         });
 
     });
