@@ -3,6 +3,19 @@
 ## Demo
 > http://jsfiddle.net/q3011893/p5k2ogy8/embedded/result,html,css,js/
 
+## HTML结构
+```
+<div class="waterfall-container">
+    <div class="box">
+        <div class="box-content">
+            <img src="http://cdn2.mhpbooks.com/2016/02/google.jpg">
+            <p>谷歌公司成立于1998年9月4日，被公认为全球最大的搜索引擎。</p>
+        </div>
+    </div>
+    …………
+</div>
+```
+
 ## 属性
 ```javascript
 
@@ -25,7 +38,9 @@
 
 #### init - 初始化 开启布局
 >  $(".waterfall-container").waterfall('init'); 
->  等效于
+
+等效于
+
 >  $(".waterfall-container").waterfall({}); 
 
 #### destroy - 关闭布局
